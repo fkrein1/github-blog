@@ -2,7 +2,7 @@ import { api } from '../lib/axios';
 
 interface Issue {
   id: number;
-  url: string;
+  html_url: string;
   number: number;
   title: string;
   body: string;
@@ -16,9 +16,9 @@ interface Issue {
 export async function getIssueByNumber(
   username: string,
   repo: string,
-  number: number,
+  id: string,
 ): Promise<Issue> {
-  const { data } = await api.get(`/${username}/${repo}/issues/${number}`);
+  const { data } = await api.get(`/repos/${username}/${repo}/issues/${id}`);
 
   return data;
 }

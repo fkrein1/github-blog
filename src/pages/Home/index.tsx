@@ -1,13 +1,12 @@
-import { HomeContainer, ProfileContainer } from "./styles";
+import { Posts } from './components/Posts';
+import { Profile } from './components/Profile';
+import { HomeContainer } from './styles';
 
 export function Home() {
-  
-
-  return(
+  return (
     <HomeContainer>
-      <ProfileContainer>
-        
-      </ProfileContainer>
+      <Profile />
+      <Posts />
     </HomeContainer>
-  )
+  );
 }
